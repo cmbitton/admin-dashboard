@@ -1,0 +1,29 @@
+* {
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+}
+
+.content-container{
+    display: grid;
+    grid-template: 75px 1fr 5fr / 1fr 4fr;
+    border: thin solid black;
+    height: 800px;
+}
+
+.content-container div, .content-container header{
+    border: thin solid black;
+}
+.sidebar{
+    grid-row: 1 / -1;
+}
+.main-content{
+    grid-row: 3 / 4
+}
+header{
+    display: grid;
+    grid-template-rows: 75px 1fr;
+    grid-column: 2 / 3;
+    grid-row: 1 / 3;
+
+}
