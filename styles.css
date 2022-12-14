@@ -6,9 +6,9 @@
 
 .content-container{
     display: grid;
-    grid-template: 75px 1fr 5fr / 1fr 4fr;
+    grid-template: 75px 1fr 6fr / 1fr 4fr;
     border: thin solid black;
-    height: 800px;
+    height: fit-content;
 }
 
 .content-container > div, .content-container > header{
@@ -34,7 +34,7 @@ header{
     grid-template: 75px auto 1fr / 1fr;
 }
 .brand-container{
-    font-size: clamp(1.3rem, 2.5vw, 2.3rem);
+    font-size: clamp(0.7rem, 1vw, 1.5rem);
 }
 .title::before{
     content: url(./icons/chart-tree.svg);
@@ -137,4 +137,39 @@ label[for='search']::after{
 }
 .username{
     font-size: 1.3rem;
+}
+
+/*Account info */
+.account-info{
+    display: flex;
+    align-items: center;
+    padding: 0px 50px;
+}
+.content-buttons{
+    margin-left: auto;
+}
+.profile-picture-large{
+    background-image: url(./profile-pic.jpg);
+    background-position: center;
+    background-size: cover;
+    width: 75px;
+    height: 75px;
+}
+
+/*main content*/
+.main-content{
+    display: grid;
+    padding: 15px;
+    grid-template: 75px 1fr / 3fr 1fr;
+}
+
+.project-grid{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+    gap: 10px;
+    grid-row: 2 / 3;
+}
+.project-card{
+    background: black;
+    height: 175px;
 }
