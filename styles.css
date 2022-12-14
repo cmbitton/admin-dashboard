@@ -160,16 +160,57 @@ label[for='search']::after{
 .main-content{
     display: grid;
     padding: 15px;
-    grid-template: 75px 1fr / 3fr 1fr;
+    grid-template: 43px 1fr / 3fr 1fr;
 }
 
 .project-grid{
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
-    gap: 10px;
+    gap: 30px;
     grid-row: 2 / 3;
 }
 .project-card{
-    background: black;
-    height: 175px;
+    background: #DDD;
+    height: 200px;
+    display: grid;
+    padding: 20px 15px;
+}
+.icons-container{
+    display: flex;
+    gap: 25px;
+    justify-self: end;
+    align-self: end;
+}
+.user{
+    display: grid;
+    grid-template: 1fr 1fr / 2fr 5fr;
+}
+.user-tag{
+    grid-column: 2 / 3;
+    grid-row: 2 / 3;
+}
+
+/*main content icons*/
+.star-icon{
+background: url(./icons/star-plus-outline.svg);
+width: 30px;
+height: 30px;
+}
+.eye-icon{
+background: url(./icons/eye-plus-outline.svg);
+width: 30px;
+height: 30px;
+}
+.fork-icon{
+background: url(./icons/source-fork.svg);
+width: 30px;
+height: 30px;
+}
+.user-icon-1, .user-icon-2, .user-icon-3, .user-icon-4{
+    background-image: url(./profile-pic.jpg);
+    background-position: center;
+    background-size: cover;
+    grid-row: 1 / 3;
+    width: 50px;
+    height: 50px;
 }
