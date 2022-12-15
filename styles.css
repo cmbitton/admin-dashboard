@@ -2,24 +2,20 @@
     box-sizing: border-box;
     margin: 0px;
     padding: 0px;
+    font-family: 'Questrial', sans-serif;
+    letter-spacing: 2px;
 }
 
 .content-container{
     display: grid;
     grid-template: 75px 1fr 6fr / 1fr 4fr;
-    border: thin solid black;
     height: fit-content;
 }
 
-.content-container > div, .content-container > header{
-    border: thin solid black;
-}
 .sidebar{
     grid-row: 1 / -1;
 }
-.main-content{
-    grid-row: 3 / 4
-}
+
 header{
     display: grid;
     grid-template-rows: 75px 1fr;
@@ -32,25 +28,31 @@ header{
     display: grid;
     padding: 15px 0px;
     grid-template: 75px auto 1fr / 1fr;
+    background-color: #1992d4;
+    color: white;
 }
 .brand-container{
     font-size: clamp(0.7rem, 1vw, 1.5rem);
+    display: flex;
+    padding: 20px 20px 50px 12px;
+    align-items: center;
+    gap: 12px;
 }
-.title::before{
-    content: url(./icons/chart-tree.svg);
+.logo{
+    background: url(./icons/chart-tree.svg);
     display: inline-block;
-    position: relative;
-    top: 2px;
+    vertical-align:text-bottom;
     padding: 0px 20px;
-    height: 30px;
-    width: 30px;
+    height: 40px;
+    width: 40px;
 }
 .menu-container{
     margin-bottom: 50px;
 }
 .menu-container div, .settings-container div{
-    font-size: clamp(1rem, 2vw, 1.5rem);
-    margin-bottom: 10px;
+    font-size: clamp(1rem, 1.5vw, 1.5rem);
+    margin-bottom: 20px;
+    font-weight: bold;
 }
 
 /*icons for sidebar*/
@@ -66,8 +68,8 @@ header{
     content: url(./icons/home.svg);
     display: inline-block;
     padding: 0px 20px;
-    height: 30px;
-    width: 30px;
+    height: 25px;
+    width: 25px;
     vertical-align: bottom;
 }
 .profile::before{
@@ -107,7 +109,11 @@ nav{
     padding: 0px 50px;
 }
 input[type='search']{
-    height: 20px;
+    height: 25px;
+    outline: none;
+    border: none;
+    background-color: #e2e8f0;
+    border-radius: 25px;
     flex: 1;
     margin-right: 45px;
 }
@@ -155,12 +161,23 @@ label[for='search']::after{
     width: 75px;
     height: 75px;
 }
+button{
+    padding: 15px 20px;
+    width: 100px;
+    background-color: #1992d4;
+    color: white;
+    border: none;
+    border-radius: 25px;
+    margin: 0px 10px;
+}
 
 /*main content*/
 .main-content{
+    grid-row: 3 / 4;
     display: grid;
     padding: 15px;
     grid-template: 43px 1fr / 3fr 1fr;
+    background-color: #e2e8f0;
 }
 
 .project-grid{
@@ -170,7 +187,7 @@ label[for='search']::after{
     grid-row: 2 / 3;
 }
 .project-card{
-    background: #DDD;
+    background: #FFF;
     height: 200px;
     display: grid;
     padding: 20px 15px;
